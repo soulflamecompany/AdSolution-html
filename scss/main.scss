@@ -1,0 +1,271 @@
+@import "normalize.css";
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #000;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+.header {
+  background-color: $primary;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 26px 18px 27px;
+  margin: 0 auto;
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+}
+.header__img {
+  width: 18px;
+  height: 15px;
+}
+.main {
+  position: relative;
+  max-width: 100%;
+  width: 320px;
+  min-height: 100vh;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.desktop {
+  display: none;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-top: 16px;
+}
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22.08px;
+}
+.title__divider {
+  background-color: $primary;
+  opacity: 0.2;
+  height: 2px;
+  width: 100%;
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card__wrapper {
+  margin-top: 23px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.card__offer {
+  position: absolute;
+  top: 18px;
+  border-radius: 5px;
+  padding: 3px 10px 4px 10px;
+  width: 123px;
+  height: 23px;
+  background-color: $accent;
+}
+.card__offer-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+.card {
+  margin-left: auto;
+  display: flex;
+  border-radius: 10px;
+  min-width: 260px;
+  height: 59px;
+  background-color: $primary;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 33px 15px 0;
+}
+.card__credits-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.card__credits-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 17px;
+  height: 17px;
+  background-color: $accent;
+  color: #000;
+}
+.card__credits-title {
+  font-weight: 700;
+  font-size: 8px;
+  text-align: center;
+}
+.card__credits {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+.card__credits-slash {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  margin-right: 4px;
+  margin-left: 2px;
+}
+.pagination__wrapper {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+}
+
+.pagination__dot {
+  border-radius: 100%;
+  width: 7px;
+  height: 7px;
+  background-color: $accent;
+}
+.card__btn {
+  margin-top: 34px;
+  border-radius: 10px;
+  width: 280px;
+  height: 55px;
+  background-color: $accent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 0 3px 1px;
+  color: #000;
+  font-family: "Ubuntu", sans-serif;
+}
+.policy__wrapper {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.policy__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  min-width: 20px;
+  height: 20px;
+  margin-left: 1px;
+}
+.policy__checkbox-img {
+  width: 10px;
+  height: 6px;
+}
+.policy__text {
+  padding-top: 1px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #000;
+}
+.policy__link {
+  color: $primary;
+}
+
+.diamond__wrapper {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.diamond__img {
+  display: flex;
+  align-self: center;
+  margin-right: 5px;
+  width: 81px;
+  height: 67px;
+}
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list__item-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $card-bg;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.list__item-img {
+  display: flex;
+  margin: 0 0 2px 1px;
+}
+.list__item-title {
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  color: $primary;
+}
+//
+.parallax {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
