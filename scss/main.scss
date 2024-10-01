@@ -21,7 +21,11 @@ body {
   background-color: #fff;
   color: #000;
   min-width: 320px;
+  width: 100%;
   overflow-x: hidden;
+}
+.desktop {
+  display: none;
 }
 .header {
   background-color: $primary;
@@ -262,10 +266,69 @@ body {
   font-size: 12px;
   color: $primary;
 }
+.list__item:first-of-type .list__item-title {
+  margin-bottom: 13px;
+  margin-left: 1px;
+}
+.list__item:last-of-type .list__item-title {
+  margin-left: 3px;
+}
 //
 .parallax {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 1440px) {
+  .mobile {
+    display: none;
+  }
+  .header {
+    height: 100px;
+    padding: 17px 19.53vw 28px;
+  }
+
+  .header__logo {
+    display: flex;
+    font-weight: 700;
+    font-size: 48px;
+    color: #fff;
+  }
+  .header__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2vw;
+  }
+
+  .header__list-item-link {
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+  }
+  .premium__btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px 13px;
+    width: 122px;
+    height: 30px;
+    background-color: #684677;
+    color: $accent;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .premium__btn-img {
+    width: 18px;
+    height: 15px;
+    margin-top: 1px;
+  }
 }

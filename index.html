@@ -13,12 +13,33 @@
 
 <body>
     <header class="header">
-        <div class="burger">
+
+        <p class="header__logo desktop">Logo</p>
+
+        <div class="burger mobile">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
         </div>
-        <img class="header__img" src="assets/diamond-s.svg" alt="Иконка бриллианта">
+        <ul class="header__list desktop">
+            <li class="header__list-item">
+                <a class="header__list-item-link" href="#">People nearby</a>
+            </li>
+            <li class="header__list-item">
+                <a class="header__list-item-link" href="#">Search</a>
+            </li>
+            <li class="header__list-item">
+                <button class="premium__btn">
+                    Premium
+                    <img class="premium__btn-img" src="assets/diamond-s.svg" alt="Иконка бриллианта">
+                </button>
+            </li>
+
+
+
+
+        </ul>
+        <img class="header__img mobile" src="assets/diamond-s.svg" alt="Иконка бриллианта">
     </header>
     <main class="main">
         <div class="container">
