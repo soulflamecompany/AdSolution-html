@@ -253,6 +253,7 @@ body {
 
 .policy__link {
   color: #9564aa;
+  cursor: pointer;
 }
 
 .diamond__wrapper {
@@ -391,8 +392,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
     min-height: 810px;
+    max-height: 100vh;
     border: 2px solid rgba(149, 100, 170, 0.1);
     border-radius: 10px;
     padding: 14px 20px 0 12px;
@@ -591,26 +592,86 @@ body {
     line-height: 1.23;
   }
   .diamond__wrapper {
-    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    gap: 0;
+    padding: 34px 5vw 0;
   }
   .diamond__img {
-    grid-area: diamond;
+    position: absolute;
+    top: 40%;
+    width: 131px;
+    height: 110px;
+    margin-right: 4%;
   }
   .list {
+    margin-right: 4%;
+    height: 100%;
     display: grid;
-    grid-template-areas: ". msg heart ." "gift . . eye" ". msg settings .";
+    grid-template-areas: "msg heart" "gift eye" "msg2 settings";
+    gap: 0;
   }
-  .list:nth-child(1) .list__item {
+  .list__item {
+    text-align: center;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 108px;
+  }
+  .list__item-img-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .list__item-img {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .list__item-title {
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 12px;
+    color: #9564aa;
+  }
+  .list__item:first-of-type .list__item-title {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .list__item:last-of-type .list__item-title {
+    margin-left: 0;
+  }
+  .list__item:nth-child(1) {
     grid-area: msg;
+    justify-self: flex-end;
+    margin-right: 2%;
   }
-  .list:nth-child(2) .list__item {
+  .list__item:nth-child(2) {
     grid-area: eye;
+    justify-self: center;
+    margin-right: 26%;
+    margin-bottom: 5%;
   }
-  .list:nth-child(3) .list__item {
+  .list__item:nth-child(3) {
     grid-area: gift;
+    justify-self: center;
+    margin-bottom: 5%;
+    margin-left: 23%;
   }
-  .list:nth-child(4) .list__item {
+  .list__item:nth-child(4) {
     grid-area: heart;
+  }
+  .list__item:nth-child(5) {
+    grid-area: msg2;
+    justify-self: flex-end;
+    margin-bottom: 2%;
+    margin-right: 2%;
+  }
+  .list__item:nth-child(6) {
+    grid-area: settings;
+    margin-bottom: 2%;
   }
 }
 @media (min-width: 1626px) {
